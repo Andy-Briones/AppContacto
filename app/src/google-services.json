@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "681180589224",
+    "firebase_url": "https://contactos-7f808-default-rtdb.firebaseio.com",
+    "project_id": "contactos-7f808",
+    "storage_bucket": "contactos-7f808.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681180589224:android:24d06958c9fce2b01fe69d",
+        "android_client_info": {
+          "package_name": "com.example.contactos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtpyshJPVNl5RQmsVjMvt1bV5Hs7bjKQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
