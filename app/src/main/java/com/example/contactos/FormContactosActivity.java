@@ -25,6 +25,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class FormContactosActivity extends AppCompatActivity {
     Button btnsave;
     Button btndelete;
+    Button btnpuntos;
+    Button btnUbi;
     ContactoService service;
     String Contactid;
     EditText edtnombre;
@@ -52,6 +54,8 @@ public class FormContactosActivity extends AppCompatActivity {
         setUpViews();
         setUpButtonSave();
         setUpButtonDelete();
+        setUpButtonPuntos();
+        setUpButtonUbi();
 
         Intent intent = getIntent();
         contactid = intent.getStringExtra("contactoid");
@@ -76,6 +80,8 @@ public class FormContactosActivity extends AppCompatActivity {
     {
         btnsave=findViewById(R.id.btnGuardar);
         btndelete=findViewById(R.id.btnDelete);
+        btnpuntos=findViewById(R.id.btnAñadeUbi);
+        btnUbi=findViewById(R.id.btnUbi);
         edtnombre=findViewById(R.id.etNombre);
         edttelefono=findViewById(R.id.etTelefono);
         edtdireccion=findViewById(R.id.etDireccion);
@@ -159,5 +165,19 @@ public class FormContactosActivity extends AppCompatActivity {
                     finish();
                     Toast.makeText(getApplicationContext(), "Contacto eliminado", Toast.LENGTH_LONG).show();
                 });
+    }
+    private void setUpButtonPuntos()
+    {
+        btnpuntos.setOnClickListener(v -> {
+            Intent intent = new Intent(this, PuntosActivity.class);
+            startActivityForResult(intent,100);
+        });
+    }
+    private void setUpButtonUbi()
+    {
+        btnUbi.setOnClickListener(v -> {
+            Intent intent = new Intent(this, MapsActivity.class);
+            startActivityForResult(intent,100);
+        });
     }
 }
